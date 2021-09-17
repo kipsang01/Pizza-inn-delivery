@@ -3,3 +3,7 @@
     background-size: cover;
     height: 100px;
 }
+.pizza img{
+    height: 200px;
+    width:200px;
+}
