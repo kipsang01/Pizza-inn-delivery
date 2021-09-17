@@ -7,7 +7,29 @@
     height: 200px;
     background-image: url("/images/pepperoni/pep2.jpg");
     background-size: cover;
+    overflow: hidden;
+    position: relative;
 }
+.anim{
+    display: none !important;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
 .animations img{
     height: 150px;
 
@@ -19,9 +41,31 @@
   color: rgb(250, 109, 15);
   font-size: 100px;
 }
+/*.fade {
+    /*-webkit-animation-name: fade;animation:slide 3s infinite;
+    -webkit-animation-duration: 1.5s;
+    
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }*/
 .pizza img{
     height: 200px;
     width:200px;
+}
+.card-body{
+    height: auto;
+}
+.content{
+    display: none;
 }
 /*.card-footer{
     display: none;
