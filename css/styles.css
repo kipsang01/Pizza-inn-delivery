@@ -9,11 +9,14 @@
     background-size: cover;
 }
 .animations img{
-    height: 200px;
+    height: 150px;
 
 }
+.animations h2{
+    color: rgb(250, 109, 15);;
+}
 #plus {
-  color: white;
+  color: rgb(250, 109, 15);
   font-size: 100px;
 }
 .pizza img{
