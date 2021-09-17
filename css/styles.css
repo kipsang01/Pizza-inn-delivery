@@ -1,0 +1,5 @@
+.top-background{
+    background-image: url("/images/top-bg.jpg");
+    background-size: cover;
+    height: 100px;
+}
