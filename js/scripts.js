@@ -107,10 +107,10 @@ $(document).ready(function(){
             this.reset();
         });
         //console.log(name,pieces,price,size,crust,topping)
-        //console.log(this.totalcost)
-       
+        //console.log(this.totalcost) 
     })
     $(".italian").submit(function(){
+        event.preventDefault();
         var name = italian.name
         var price = italian.price
         var pieces = $("#pieces").val();
@@ -125,7 +125,45 @@ $(document).ready(function(){
         $(".empty").append("<li>Italian pizza + " +topping+" @ "+order2.totalcost()+"<i class='fa fa-times' aria-hidden='true'></i></li>")
        // $("#total").html(order1.totalcost());
 
+        
+    })
+
+    $(".cheese").submit(function(){
         event.preventDefault();
+        var name = italian.name
+        var price = italian.price
+        var pieces = $("#pieces").val();
+        var size = $("input[name='size']:checked").val();
+        var crust = $("input[name='crust']:checked").val();
+        var topping = [];
+        $('input[name="topping"]:checked').each(function() {
+        topping.push($(this).val());
+        });
+      
+        var order3 = new Order(name,pieces,price,size,crust,topping)
+        $(".empty").append("<li>Italian pizza + " +topping+" @ "+order3.totalcost()+"<i class='fa fa-times' aria-hidden='true'></i></li>")
+       // $("#total").html(order1.totalcost());
+
+        
+    })
+
+    $(".italian").submit(function(){
+        event.preventDefault();
+        var name = italian.name
+        var price = italian.price
+        var pieces = $("#pieces").val();
+        var size = $("input[name='size']:checked").val();
+        var crust = $("input[name='crust']:checked").val();
+        var topping = [];
+        $('input[name="topping"]:checked').each(function() {
+        topping.push($(this).val());
+        });
+      
+        var order3 = new Order(name,pieces,price,size,crust,topping)
+        $(".empty").append("<li>Italian pizza + " +topping+" @ "+order3.totalcost()+"<i class='fa fa-times' aria-hidden='true'></i></li>")
+       // $("#total").html(order1.totalcost());
+
+        
     })
 
 })
