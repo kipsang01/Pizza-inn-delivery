@@ -13,8 +13,9 @@ function Order(name,size,crust,topping){
     this.name = name;
     this.size = size;
     this.crust= crust;
-    this.topping= topping;
+    this.topping= [];
 }
+
 Order.prototype.price = function(){
     if (this.size==large) {
        return this.Pizza.price; 
@@ -26,6 +27,15 @@ Order.prototype.price = function(){
         return this.Pizza.price/4
     }
 }
+
+Order.prototype.total = function(){
+    var sumtotal = this.name.price
+    for (let i = 0; i < this.topping.length; i++) {
+        sumtotal += this.topping[i];
+    }
+    return sumtotal;
+}
+
 function Pizza(name,price){
     this.name = name;
     this.price= price;
@@ -58,19 +68,23 @@ $(document).ready(function(){
     $(".submitbtn").click(function(){
         $(".content1").slideToggle();
     })
-        event.preventDefault();
+      //  event.preventDefault();
 
 
-    $("#form.chicken").submit(function(){
-        event.preventDefault();
+    $(".chicken").submit(function(){
         var name = "Chicken hawaiian"
         var pieces = $("#pieces").val();
         var size = $("input[name='size']:checked").val();
         var crust = $("input[name='crust']:checked").val();
-        var toppings = new Array();
+        var topping = new Array();
         $('input[name="topping"]:checked').each(function() {
-        toppings.push(this.value);
+        topping.push(this.value);
         });
+        //toppings = topping.join()
+        var order1 = new Order(name,size,crust,topping)
+        //console.log(name,pieces,size,crust,topping)
+        console.log(order1)
+        event.preventDefault();
     })
 
 })
