@@ -50,17 +50,6 @@
             </div>
         </section>
         <div class="row">
-            <!--<div class="col-lg-3">
-                <h3>Filter by Type</h3>
-                <ul>
-                    <li>All</li>
-                    <li>Cheese</li>
-                    <li>Veggie</li>
-                    <li>Pepperoni</li>
-                    <li>Meat</li>
-                </ul>
-
-            </div>-->
             <div class="col-lg-8 d-flex flex-row flex-wrap justify-content-center">
                 <div class="card pizza m-lg-4">
                     <div class="card-body d-flex flex-column">
@@ -116,15 +105,15 @@
                         </div>
                         <button class="submitbtn">order</button>
                     </div>
-                </div><!--
+                </div>
                 <div class="card pizza m-lg-4">
                     <div class="card-body d-flex flex-column">
-                        <img src="/images/cheese/cheese2.jpg" alt="chicken hawaiann">Chicken Hawaiaan
-                        <div class="content">
-                        <form>
+                        <img src="/images/cheese/cheese2.jpg" alt="chicken hawaiann">Italian pizza
+                        <div class="content1">
+                        <form class="italian">
                             <div class="form-group">
                                 <label for="pieces">Pieces:</label>
-                                <input type="text" class="form-check-input" name="pieces" id="pieces">
+                                <input type="text" class="col-4" name="pieces" id="pieces">
                             </div>
                             <br>Size:
                             <div class="form-check form-check-inline">
@@ -153,251 +142,37 @@
                                 <label class="form-check-label" for="glutten">Glutten-free</label>
                             </div><br>
                                 Select topping(s):<br>
-                                <input type="checkbox" id="meat" name="meat" value="meat">
+                                <input type="checkbox" id="meat" name="topping" value="meatTop">
                                 <label for="meat"> Meat</label><br>
-                                <input type="checkbox" id="onions" name="onions" value="onions">
+                                <input type="checkbox" id="onions" name="topping" value="onions">
                                 <label for="onions"> Onions</label><br>
-                                <input type="checkbox" id="bacon" name="bacon" value="bacon">
+                                <input type="checkbox" id="bacon" name="topping"value="bacon">
                                 <label for="bacon"> Bacon</label><br>
-                                <input type="checkbox" id="pepper" name="peppers" value="peppers">
+                                <input type="checkbox" id="pepper" name="topping"value="greenpeppers">
                                 <label for="peppers"> Green peppers</label><br>
-                                <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni">
+                                <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
                                 <label for="pepperoni"> Pepperoni</label><br>
-                                <input type="checkbox" id="cheese" name="cheese" value="cheese">
+                                <input type="checkbox" id="cheese" name="topping" value="extracheese">
                                 <label for="cheese"> Extra Cheese</label><br>
                            
-                            <button type= "submit" value="submit">Add to ORDER</button>
+                            <button type= "submit" value="submit"class="submitbutton">Add to ORDER</button>
                         </form>
                         </div>
                         <button class="submitbtn">order</button>
                     </div>
                 </div>
-                <div class="card pizza m-lg-4">
-                    <div class="card-body d-flex flex-column">
-                        <img src="/images/cheese/cheese2.jpg" alt="chicken hawaiann">Chicken Hawaiaan
-                        <div class="content2">
-                        <form>
-                            <div class="form-group">
-                                <label for="pieces">Pieces:</label>
-                                <input type="text" class="form-check-input" name="pieces" id="pieces">
-                            </div>
-                            <br>Size:
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="size" id="large" value="large">
-                                <label class="form-check-label" for="large">Large</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="size" id="medium" value="medium">
-                                <label class="form-check-label" for="medium">Medium</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="size" id="small" value="small">
-                                <label class="form-check-label" for="small">Small</label>
-                            </div>
-                            <br>crust type:
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="crust" id="crispy" value="crispy">
-                                <label class="form-check-label" for="crispy">Crispy</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="crust" id="stuffed" value="stuffed">
-                                <label class="form-check-label" for="stuffed">Stuffed</label>
-                            </div><br>
-                                <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="crust" id="glutten" value="glutten">
-                                <label class="form-check-label" for="glutten">Glutten-free</label>
-                            </div><br>
-                                Select topping(s):<br>
-                                <input type="checkbox" id="meat" name="meat" value="meat">
-                                <label for="meat"> Meat</label><br>
-                                <input type="checkbox" id="onions" name="onions" value="onions">
-                                <label for="onions"> Onions</label><br>
-                                <input type="checkbox" id="bacon" name="bacon" value="bacon">
-                                <label for="bacon"> Bacon</label><br>
-                                <input type="checkbox" id="pepper" name="peppers" value="peppers">
-                                <label for="peppers"> Green peppers</label><br>
-                                <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni">
-                                <label for="pepperoni"> Pepperoni</label><br>
-                                <input type="checkbox" id="cheese" name="cheese" value="cheese">
-                                <label for="cheese"> Extra Cheese</label><br>
-                           
-                            <button type= "submit" value="submit">Add to ORDER</button>
-                        </form>
-                        </div>
-                        <button class="submitbtn">order</button>
-                    </div>
-                </div>
-                <div class="card pizza m-lg-4">
-                    <div class="card-body d-flex flex-column">
-                        <img src="/images/cheese/cheese2.jpg" alt="chicken hawaiann">Chicken Hawaiaan
-                        <div class="content3">
-                        <form>
-                            <div class="form-group">
-                                <label for="pieces">Pieces:</label>
-                                <input type="text" class="form-check-input" name="pieces" id="pieces">
-                            </div>
-                            <br>Size:
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="size" id="large" value="large">
-                                <label class="form-check-label" for="large">Large</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="size" id="medium" value="medium">
-                                <label class="form-check-label" for="medium">Medium</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="size" id="small" value="small">
-                                <label class="form-check-label" for="small">Small</label>
-                            </div>
-                            <br>crust type:
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="crust" id="crispy" value="crispy">
-                                <label class="form-check-label" for="crispy">Crispy</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="crust" id="stuffed" value="stuffed">
-                                <label class="form-check-label" for="stuffed">Stuffed</label>
-                            </div><br>
-                                <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="crust" id="glutten" value="glutten">
-                                <label class="form-check-label" for="glutten">Glutten-free</label>
-                            </div><br>
-                                Select topping(s):<br>
-                                <input type="checkbox" id="meat" name="meat" value="meat">
-                                <label for="meat"> Meat</label><br>
-                                <input type="checkbox" id="onions" name="onions" value="onions">
-                                <label for="onions"> Onions</label><br>
-                                <input type="checkbox" id="bacon" name="bacon" value="bacon">
-                                <label for="bacon"> Bacon</label><br>
-                                <input type="checkbox" id="pepper" name="peppers" value="peppers">
-                                <label for="peppers"> Green peppers</label><br>
-                                <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni">
-                                <label for="pepperoni"> Pepperoni</label><br>
-                                <input type="checkbox" id="cheese" name="cheese" value="cheese">
-                                <label for="cheese"> Extra Cheese</label><br>
-                           
-                            <button type= "submit" value="submit">Add to ORDER</button>
-                        </form>
-                        </div>
-                        <button class="submitbtn">order</button>
-                    </div>
-                </div>
-                <div class="card pizza m-lg-4">
-                    <div class="card-body d-flex flex-column text-center">
-                        <img src="/images/cheese/cheese2.jpg" alt="chicken hawaiann">Chicken Hawaiaan
-                        <form>
-                            <div class="content">
-                            <label for="pieces">Pieces:</label>
-                            <input type="text" class="form-check-input" name="pieces" id="pieces">
-                            <br>Size:
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="size" id="large" value="large">
-                                <label class="form-check-label" for="large">Large</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="size" id="medium" value="medium">
-                                <label class="form-check-label" for="medium">Medium</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="size" id="small" value="small">
-                                <label class="form-check-label" for="small">Small</label>
-                            </div>
-                            <br>crust type:
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="crust" id="crispy" value="crispy">
-                                <label class="form-check-label" for="crispy">Crispy</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="crust" id="stuffed" value="stuffed">
-                                <label class="form-check-label" for="stuffed">Stuffed</label>
-                            </div><br>
-                                <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="crust" id="glutten" value="glutten">
-                                <label class="form-check-label" for="glutten">Glutten-free</label>
-                            </div><br>
-                                Select topping(s):<br>
-                                <input type="checkbox" id="meat" name="meat" value="meat">
-                                <label for="meat"> Meat</label><br>
-                                <input type="checkbox" id="onions" name="onions" value="onions">
-                                <label for="onions"> Onions</label><br>
-                                <input type="checkbox" id="bacon" name="bacon" value="bacon">
-                                <label for="bacon"> Bacon</label><br>
-                                <input type="checkbox" id="pepper" name="peppers" value="peppers">
-                                <label for="peppers"> Green peppers</label><br>
-                                <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni">
-                                <label for="pepperoni"> Pepperoni</label><br>
-                                <input type="checkbox" id="cheese" name="cheese" value="cheese">
-                                <label for="cheese"> Extra Cheese</label><br>
-                            </div>
-                            <button type= "submit" value="submit">Add to ORDER</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="card pizza m-lg-4">
-                    <div class="card-body d-flex flex-column text-center">
-                        <img src="/images/cheese/cheese2.jpg" alt="chicken hawaiann">Chicken Hawaiaan
-                        <form>
-                            <div class="content">
-                            <label for="pieces">Pieces:</label>
-                            <input type="text" class="form-check-input" name="pieces" id="pieces">
-                            <br>Size:
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="size" id="large" value="large">
-                                <label class="form-check-label" for="large">Large</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="size" id="medium" value="medium">
-                                <label class="form-check-label" for="medium">Medium</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="size" id="small" value="small">
-                                <label class="form-check-label" for="small">Small</label>
-                            </div>
-                            <br>crust type:
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="crust" id="crispy" value="crispy">
-                                <label class="form-check-label" for="crispy">Crispy</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="crust" id="stuffed" value="stuffed">
-                                <label class="form-check-label" for="stuffed">Stuffed</label>
-                            </div><br>
-                                <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="crust" id="glutten" value="glutten">
-                                <label class="form-check-label" for="glutten">Glutten-free</label>
-                            </div><br>
-                                Select topping(s):<br>
-                                <input type="checkbox" id="meat" name="meat" value="meat">
-                                <label for="meat"> Meat</label><br>
-                                <input type="checkbox" id="onions" name="onions" value="onions">
-                                <label for="onions"> Onions</label><br>
-                                <input type="checkbox" id="bacon" name="bacon" value="bacon">
-                                <label for="bacon"> Bacon</label><br>
-                                <input type="checkbox" id="pepper" name="peppers" value="peppers">
-                                <label for="peppers"> Green peppers</label><br>
-                                <input type="checkbox" id="pepperoni" name="pepperoni" value="pepperoni">
-                                <label for="pepperoni"> Pepperoni</label><br>
-                                <input type="checkbox" id="cheese" name="cheese" value="cheese">
-                                <label for="cheese"> Extra Cheese</label><br>
-                            </div>
-                            <button type= "submit" value="submit">Add to ORDER</button>
-                        </form>
-                    </div>
-                </div>
-            </div>-->
+            </div>   
             <div class="col-lg-4">
                 <div class="card sticky-top">
                     <div class="card-header"><h2>Orders made</h2></div>
                     <div class="card-body">
-                        <p class="empty">You have not selected any pizza!</p>
+                        <ul class="empty"></ul>
                     </div>
                     <div class="card-footer">
                         Total: <span id="total">0.00</span>Kshs.
                     </div>
                 </div>    
             </div>
-        <div class="contact">
-
         </div>
         <footer>
             <div class="row">
@@ -417,7 +192,6 @@
                 <div class="col-lg-4 text-center"></div>
             </div>
         </footer>
-    </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

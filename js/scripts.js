@@ -26,8 +26,7 @@ Order.prototype.pizzaprice = function(){
         return this.price/2;
     }
     else{
-        //return this.price/4;
-        console.log("error")
+        return this.price/4;
     }
 }
 
@@ -79,10 +78,6 @@ var pepperoni = new Topping("Pepperoni",200);
 var extracheese = new Topping("Extra Cheese",200);
 
 
-//console.log(chicken.price)
-
-
-
 
 $(document).ready(function(){
      
@@ -93,8 +88,31 @@ $(document).ready(function(){
 
 
     $(".chicken").submit(function(){
+        event.preventDefault();
         var name = chicken.name
         var price = chicken.price
+        var pieces = $("#pieces").val();
+        var size = $("input[name='size']:checked").val();
+        var crust = $("input[name='crust']:checked").val();
+        var topping = [];
+
+        $('input[name="topping"]:checked').each(function() {
+        topping.push($(this).val());
+        });
+
+        var order1 = new Order(name,pieces,price,size,crust,topping)
+        $(".empty").append("<li>Chicken hawaiian + " +topping+" @ "+order1.totalcost()+"<i class='fa fa-times' aria-hidden='true'></i></li>")
+       // $("#total").html(order1.totalcost());
+        $(this).each(function(){
+            this.reset();
+        });
+        //console.log(name,pieces,price,size,crust,topping)
+        //console.log(this.totalcost)
+       
+    })
+    $(".italian").submit(function(){
+        var name = italian.name
+        var price = italian.price
         var pieces = $("#pieces").val();
         var size = $("input[name='size']:checked").val();
         var crust = $("input[name='crust']:checked").val();
@@ -102,13 +120,11 @@ $(document).ready(function(){
         $('input[name="topping"]:checked').each(function() {
         topping.push($(this).val());
         });
-        //toppings = topping.join()
-        //topping = toppings[0].price;
-        var order1 = new Order(name,pieces,price,size,crust,topping)
-        $(".empty").append("<p>Chicken hawaiian + " +topping+"</p>")
-        $("#total").html(order1.totalcost());
-        //console.log(name,pieces,price,size,crust,topping)
-        //console.log(order1.totalcost())
+      
+        var order2 = new Order(name,pieces,price,size,crust,topping)
+        $(".empty").append("<li>Italian pizza + " +topping+" @ "+order2.totalcost()+"<i class='fa fa-times' aria-hidden='true'></i></li>")
+       // $("#total").html(order1.totalcost());
+
         event.preventDefault();
     })
 

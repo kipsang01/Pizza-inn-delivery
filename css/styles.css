@@ -64,7 +64,13 @@
 .card-body{
     height: auto;
 }
-.content1,.content2,.content3{
+
+i{
+    color: red;
+    font-size: 50px;
+    margin: 5px;
+}
+/*.content1,.content2,.content3{
     display: none;
 }
 /*.card-footer{
