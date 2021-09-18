@@ -84,6 +84,7 @@ $(document).ready(function(){
     $(".submitbtn").click(function(){
         $(".content1").slideToggle();
     })
+   
       //  event.preventDefault();
 
 
@@ -101,8 +102,11 @@ $(document).ready(function(){
         });
 
         var order1 = new Order(name,pieces,price,size,crust,topping)
-        $(".empty").append("<li>Chicken hawaiian + " +topping+" @ "+order1.totalcost()+"<i class='fa fa-times' aria-hidden='true'></i></li>")
+        $(".empty").append("<li>Chicken hawaiian + " +topping+" @ "+order1.totalcost()+"<span id ='rm'><i class='fa fa-times' aria-hidden='true'></i></span></li>")
        // $("#total").html(order1.totalcost());
+        $("#rm").click(function(){
+            $(this).closest('li').remove();
+        })
         $(this).each(function(){
             this.reset();
         });
@@ -122,16 +126,18 @@ $(document).ready(function(){
         });
       
         var order2 = new Order(name,pieces,price,size,crust,topping)
-        $(".empty").append("<li>Italian pizza + " +topping+" @ "+order2.totalcost()+"<i class='fa fa-times' aria-hidden='true'></i></li>")
+        $(".empty").append("<li>Italian pizza + " +topping+" @ "+order2.totalcost()+"<span id ='rm2'><i class='fa fa-times' aria-hidden='true'></i></span></li>")
        // $("#total").html(order1.totalcost());
-
+        $("#rm2").click(function(){
+            $(this).closest('li').remove();
+        })
         
     })
 
     $(".cheese").submit(function(){
         event.preventDefault();
-        var name = italian.name
-        var price = italian.price
+        var name = cheese.name
+        var price = cheese.price
         var pieces = $("#pieces").val();
         var size = $("input[name='size']:checked").val();
         var crust = $("input[name='crust']:checked").val();
@@ -141,16 +147,19 @@ $(document).ready(function(){
         });
       
         var order3 = new Order(name,pieces,price,size,crust,topping)
-        $(".empty").append("<li>Italian pizza + " +topping+" @ "+order3.totalcost()+"<i class='fa fa-times' aria-hidden='true'></i></li>")
+        $(".empty").append("<li>Cheese pizza + " +topping+" @ "+order3.totalcost()+"<span id ='rm3'><i class='fa fa-times' aria-hidden='true'></i></span></li>")
        // $("#total").html(order1.totalcost());
+        $("#rm3").click(function(){
+            $(this).closest('li').remove();
+        })
 
         
     })
 
-    $(".italian").submit(function(){
+    $(".meaty").submit(function(){
         event.preventDefault();
-        var name = italian.name
-        var price = italian.price
+        var name = meat.name
+        var price = meat.price
         var pieces = $("#pieces").val();
         var size = $("input[name='size']:checked").val();
         var crust = $("input[name='crust']:checked").val();
@@ -160,8 +169,11 @@ $(document).ready(function(){
         });
       
         var order3 = new Order(name,pieces,price,size,crust,topping)
-        $(".empty").append("<li>Italian pizza + " +topping+" @ "+order3.totalcost()+"<i class='fa fa-times' aria-hidden='true'></i></li>")
+        $(".empty").append("<li>Meat pizza + " +topping+" @ "+order3.totalcost()+"<span id ='rm4'><i class='fa fa-times' aria-hidden='true'></i></span></li>")
        // $("#total").html(order1.totalcost());
+        $("#rm4").click(function(){
+            $(this).closest('li').remove();
+        })
 
         
     })
