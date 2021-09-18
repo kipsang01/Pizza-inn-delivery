@@ -64,7 +64,7 @@
 .card-body{
     height: auto;
 }
-.content{
+.content1,.content2,.content3{
     display: none;
 }
 /*.card-footer{
