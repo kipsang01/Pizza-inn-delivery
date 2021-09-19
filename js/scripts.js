@@ -31,6 +31,7 @@ Order.prototype.pizzaprice = function(){
 }
 
 Order.prototype.totalcost = function(){
+    //var summ = parseInt(this.pieces);
     var sumtotal = this.pizzaprice();
     for (let i = 0; i < this.topping.length; i++) {
         if (this.topping[i]==="meatTop") {
@@ -75,7 +76,9 @@ var onions = new Topping("Onion",100);
 var bacon = new Topping("Bacon",200);
 var greenpeppers = new Topping("Green Peppers",100);
 var pepperoni = new Topping("Pepperoni",200);
-var extracheese = new Topping("Extra Cheese",200);
+var extracheese = new Topping("Extra Cheese",200); 
+
+var totalBudget = 0.00;
 
 
 
@@ -85,8 +88,14 @@ $(document).ready(function(){
         $(".content1").slideToggle();
     })
    
-      //  event.preventDefault();
-
+    $("#delivery").click(function(){
+        if ($(this).is(":checked")) {
+            $(".delivery_details").show();
+        } else {
+            $(".delivery_details").hide();
+        }
+    })
+        
 
     $(".chicken").submit(function(){
         event.preventDefault();
@@ -102,16 +111,19 @@ $(document).ready(function(){
         });
 
         var order1 = new Order(name,pieces,price,size,crust,topping)
-        $(".empty").append("<li>Chicken hawaiian + " +topping+" @ "+order1.totalcost()+"<span id ='rm'><i class='fa fa-times' aria-hidden='true'></i></span></li>")
-       // $("#total").html(order1.totalcost());
+        $(".empty").append("<li>Chicken hawaiian + " +topping+" @ "+order1.totalcost()+"<span id ='rm'><i class='fa fa-times' aria-hidden='true'></i></span></li>");
+       
+         totalBudget += order1.totalcost();
+         $("#total").text(totalBudget);
+
         $("#rm").click(function(){
             $(this).closest('li').remove();
+            totalBudget -= order1.totalcost();
+            $("#total").text(totalBudget);
         })
         $(this).each(function(){
             this.reset();
         });
-        //console.log(name,pieces,price,size,crust,topping)
-        //console.log(this.totalcost) 
     })
     $(".italian").submit(function(){
         event.preventDefault();
@@ -127,10 +139,18 @@ $(document).ready(function(){
       
         var order2 = new Order(name,pieces,price,size,crust,topping)
         $(".empty").append("<li>Italian pizza + " +topping+" @ "+order2.totalcost()+"<span id ='rm2'><i class='fa fa-times' aria-hidden='true'></i></span></li>")
-       // $("#total").html(order1.totalcost());
+        
+        totalBudget += order2.totalcost();
+        $("#total").text(totalBudget)
+
         $("#rm2").click(function(){
             $(this).closest('li').remove();
+            totalBudget -= order2.totalcost();
+            $("#total").text(totalBudget)
         })
+        $(this).each(function(){
+            this.reset();
+        });
         
     })
 
@@ -148,10 +168,18 @@ $(document).ready(function(){
       
         var order3 = new Order(name,pieces,price,size,crust,topping)
         $(".empty").append("<li>Cheese pizza + " +topping+" @ "+order3.totalcost()+"<span id ='rm3'><i class='fa fa-times' aria-hidden='true'></i></span></li>")
-       // $("#total").html(order1.totalcost());
+        
+        totalBudget += order3.totalcost();
+        $("#total").text(totalBudget)
+
         $("#rm3").click(function(){
             $(this).closest('li').remove();
+            totalBudget -= order3.totalcost();
+            $("#total").text(totalBudget)
         })
+        $(this).each(function(){
+            this.reset();
+        });
 
         
     })
@@ -168,12 +196,19 @@ $(document).ready(function(){
         topping.push($(this).val());
         });
       
-        var order3 = new Order(name,pieces,price,size,crust,topping)
-        $(".empty").append("<li>Meat pizza + " +topping+" @ "+order3.totalcost()+"<span id ='rm4'><i class='fa fa-times' aria-hidden='true'></i></span></li>")
-       // $("#total").html(order1.totalcost());
+        var order4 = new Order(name,pieces,price,size,crust,topping)
+        $(".empty").append("<li>Meat pizza + " +topping+" @ "+order4.totalcost()+"<span id ='rm4'><i class='fa fa-times' aria-hidden='true'></i></span></li>")
+        
+        totalBudget += order4.totalcost();
+        $("#total").text(totalBudget)
         $("#rm4").click(function(){
             $(this).closest('li').remove();
+            totalBudget -= order4.totalcost();
+            $("#total").text(totalBudget);
         })
+        $(this).each(function(){
+            this.reset();
+        });
 
         
     })

@@ -57,8 +57,8 @@
                         <div class="content1">
                         <form class="chicken">
                             <div class="form-group">
-                                <label for="pieces">Pieces:</label>
-                                <input type="text" class="col-4" name="pieces" id="pieces">
+                                <label for="pieces1">Pieces:</label>
+                                <input type="text" class="col-4" name="pieces" id="pieces1">
                             </div>
                             <br>Size:
                             <div class="form-check form-check-inline">
@@ -103,7 +103,6 @@
                             <button type= "submit" value="submit"class="submitbutton">Add to ORDER</button>
                         </form>
                         </div>
-                        <button class="submitbtn">order</button>
                     </div>
                 </div>
                 <div class="card pizza m-lg-4">
@@ -113,7 +112,7 @@
                         <form class="italian">
                             <div class="form-group">
                                 <label for="pieces">Pieces:</label>
-                                <input type="text" class="col-4" name="pieces" id="pieces">
+                                <input type="text" class="col-4" name="pieces" id="pieces2">
                             </div>
                             <br>Size:
                             <div class="form-check form-check-inline">
@@ -134,7 +133,7 @@
                                 <label class="form-check-label" for="crispy2">Crispy</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="crust" id="stuffed" value="stuffed2">
+                                <input class="form-check-input" type="radio" name="crust" id="stuffed2" value="stuffed">
                                 <label class="form-check-label" for="stuffed2">Stuffed</label>
                             </div><br>
                                 <div class="form-check form-check-inline">
@@ -166,8 +165,8 @@
                         <div class="content1">
                         <form class="cheese">
                             <div class="form-group">
-                                <label for="pieces">Pieces:</label>
-                                <input type="text" class="col-4" name="pieces" id="pieces">
+                                <label for="pieces4">Pieces:</label>
+                                <input type="text" class="col-4" name="pieces" id="pieces4">
                             </div>
                             <br>Size:
                             <div class="form-check form-check-inline">
@@ -200,13 +199,13 @@
                                 <label for="meat3"> Meat</label><br>
                                 <input type="checkbox" id="onions3" name="topping" value="onions">
                                 <label for="onions3"> Onions</label><br>
-                                <input type="checkbox" id="bacon3" name="topping3"value="bacon">
+                                <input type="checkbox" id="bacon3" name="topping"value="bacon">
                                 <label for="bacon3"> Bacon</label><br>
                                 <input type="checkbox" id="pepper3" name="topping"value="greenpeppers">
                                 <label for="pepper3"> Green peppers</label><br>
                                 <input type="checkbox" id="pepperoni3" name="topping" value="pepperoni">
                                 <label for="pepperoni3"> Pepperoni</label><br>
-                                <input type="checkbox" id="cheese" name="topping3" value="extracheese">
+                                <input type="checkbox" id="cheese3" name="topping" value="extracheese">
                                 <label for="cheese3"> Extra Cheese</label><br>
                            
                             <button type= "submit" value="submit"class="submitbutton">Add to ORDER</button>
@@ -275,8 +274,20 @@
                     <div class="card-body">
                         <ul class="empty"></ul>
                     </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="delivery" name="delivery" value="delivery">
+                        <label for="delivery"> Delivery</label>
+                    </div>
+                    <div class="delivery_details">
+                        <div class="form-group">
+                            <label for="location">Location:</label>
+                            <input type="text" class="col-6" name="location" id="location"><br>
+                            <label for = "phone">Phone No:</label>
+                            <input type="tel" class="col-6" name="phone" id="phone" pattern="[0-9]{10}">
+                        </div>
+                    </div>
                     <div class="card-footer">
-                        Total: <span id="total">0.00</span>Kshs.
+                        Total: <span id="total"></span>Kshs.
                     </div>
                 </div>    
             </div>
