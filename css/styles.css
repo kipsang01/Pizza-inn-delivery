@@ -76,11 +76,11 @@
 }
 #orderpizza{
     padding: 10px;
-    background-color: rgb(250, 109, 15,0.4);;
+    background-color: rgb(250, 109, 15,0.4);
 }
 .pizza img{
     height: 200px;
-    width:200px;
+    width:300px;
 }
 .card-body{
     height: auto;
@@ -94,9 +94,41 @@ i{
 .delivery_details{
     display: none;
 }
-/*.content1,.content2,.content3{
-    display: none;
+.del{
+    margin-left: 20px;
 }
-/*.card-footer{
-    display: none;
-}*?/
+.contact-us{
+    height: 400px;
+    background-color: rgb(250, 109, 15,0.7);
+    padding-top:30px ;
+}
+#name, #email{
+    width: 40%;
+    margin:20px;
+    background:transparent;
+    border: 1px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    color: white;
+}
+#message{
+    width: 80%;
+    height: 100px;
+    margin-left: 30px;
+    background:transparent;
+    border: 1px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    padding: 0px;
+    color: white;
+}
+::placeholder {
+    color: white;
+    text-align: start;
+}
+#msg{
+    margin: 20px;
+    background-color: rgb(190, 190, 190);
+    color: white;
+    border-radius: 5px;
+}

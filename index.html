@@ -281,6 +281,7 @@
                     <div class="card-body">
                         <ul class="empty"></ul>
                     </div>
+                    <div class="del">
                     <div class="form-group">
                         <input type="checkbox" id="delivery" name="delivery" value="delivery">
                         <label for="delivery"> Delivery</label>
@@ -293,11 +294,21 @@
                             <input type="tel" class="col-6" name="phone" id="phone" pattern="[0-9]{10}">
                         </div>
                     </div>
+                    </div>
                     <div class="card-footer">
-                        Total: <span id="total"></span>Kshs.
+                        Total: Kshs. <span id="total"></span>.00
                     </div>
                 </div>    
             </div>
+        </div>
+        <div class="container-fluid contact-us d-flex flex-column align-items-center">
+            <h2 class="text-center">CONTACT US</h2>
+            <form action="">
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="email" name="email" id="email" placeholder="Email"><br>
+                <input type="text" name="message" id="message" placeholder="Your message here..."><br>
+                <button id="msg" type="submit">SEND</button>
+            </form>
         </div>
         <footer>
             <div class="row">
