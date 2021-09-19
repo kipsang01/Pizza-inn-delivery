@@ -1,10 +1,43 @@
 .top-background{
     background-image: url("/images/top-bg.jpg");
     background-size: cover;
+    height: 50px;
+}
+.landing{
+    padding: 10px;
+    height: 500px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(250, 109, 15,0.4);
+    margin-bottom: 20px;
+    background-image: url("/images/bg.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+
+}
+#joint{
+    font-family: 'Grey Qo', cursive;
+}
+.welcome{
+    width: 400px;
+}
+.landing #land{
+    border-radius: 10px;
+}
+#logo{
     height: 100px;
+    background-color: rgb(250, 109, 15);
+}
+#orderbtn{
+    border-radius: 10px;
+    margin:10px;
+    height: 50px;
+}
+#orderbtn a{
+    text-decoration: none;
+    color: white;
 }
 .animations{
-    height: 200px;
+    height: 0px;
     background-image: url("/images/pepperoni/pep2.jpg");
     background-size: cover;
     overflow: hidden;
@@ -41,22 +74,10 @@
   color: rgb(250, 109, 15);
   font-size: 100px;
 }
-/*.fade {
-    /*-webkit-animation-name: fade;animation:slide 3s infinite;
-    -webkit-animation-duration: 1.5s;
-    
-    animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }*/
+#orderpizza{
+    padding: 10px;
+    background-color: rgb(250, 109, 15,0.4);;
+}
 .pizza img{
     height: 200px;
     width:200px;

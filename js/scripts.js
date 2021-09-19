@@ -78,8 +78,6 @@ var greenpeppers = new Topping("Green Peppers",100);
 var pepperoni = new Topping("Pepperoni",200);
 var extracheese = new Topping("Extra Cheese",200); 
 
-var totalBudget = 0.00;
-
 
 
 $(document).ready(function(){
@@ -88,11 +86,14 @@ $(document).ready(function(){
         $(".content1").slideToggle();
     })
    
+    var totalBudget = 0;
     $("#delivery").click(function(){
         if ($(this).is(":checked")) {
             $(".delivery_details").show();
+            totalBudget += 100;
         } else {
             $(".delivery_details").hide();
+            totalBudget -= 100;
         }
     })
         
