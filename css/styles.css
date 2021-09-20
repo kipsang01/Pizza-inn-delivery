@@ -109,6 +109,11 @@ i{
     color: white;
     margin-left: 100px;
 }
+#clear{
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+}
 .contact-us{
     height: 400px;
     background-color: rgb(250, 109, 15,0.5);
