@@ -1,5 +1,5 @@
 .top-background{
-    background-image: url("/images/top-bg.jpg");
+    background-image: url("../images/top-bg.jpg");
     background-size: cover;
     height: 50px;
 }
@@ -9,7 +9,7 @@
     color: rgb(255, 255, 255);
     background-color: rgb(250, 109, 15,0.4);
     margin-bottom: 20px;
-    background-image: url("/images/bg.jpg");
+    background-image: url("../images/bg.jpg");
     background-size:cover;
     background-repeat: no-repeat;
 
@@ -35,40 +35,6 @@
 #orderbtn a{
     text-decoration: none;
     color: white;
-}
-.animations{
-    height: 0px;
-    background-image: url("/images/pepperoni/pep2.jpg");
-    background-size: cover;
-    overflow: hidden;
-    position: relative;
-}
-.anim{
-    display: none !important;
-}
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-.animations img{
-    height: 150px;
-
-}
-.animations h2{
-    color: rgb(250, 109, 15);;
 }
 #plus {
   color: rgb(250, 109, 15);
