@@ -97,6 +97,10 @@ $(document).ready(function(){
         }
     })
         
+    $("#orderr").click(function(){
+        var locationn = $("#location").val();
+        $(".notification").append("<p>Thank you for ordering from us your order would be delivered to <b>"+ locationn +" <b>as soon as possible<p>")
+    })
 
     $(".chicken").submit(function(){
         event.preventDefault();
