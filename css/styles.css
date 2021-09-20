@@ -97,9 +97,21 @@ i{
 .del{
     margin-left: 20px;
 }
+.submitbutton{
+    background-color: orange;
+    border-radius: 10px;
+    color: white;
+    margin-left: 20px;
+}
+ #orderr{
+    background-color: orange;
+    border-radius: 10px;
+    color: white;
+    margin-left: 100px;
+}
 .contact-us{
     height: 400px;
-    background-color: rgb(250, 109, 15,0.7);
+    background-color: rgb(250, 109, 15,0.5);
     padding-top:30px ;
 }
 #name, #email{
@@ -131,4 +143,8 @@ i{
     background-color: rgb(190, 190, 190);
     color: white;
     border-radius: 5px;
+}
+footer{
+    background-color: rgb(250, 109, 15,0.5);
+    margin-bottom: 20px;
 }

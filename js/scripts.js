@@ -110,12 +110,11 @@ $(document).ready(function(){
         $('input[name="topping"]:checked').each(function() {
         topping.push($(this).val());
         });
-
-        var order1 = new Order(name,pieces,price,size,crust,topping)
-        $(".empty").append("<li>Chicken hawaiian + " +topping+" @ "+order1.totalcost()+"<span id ='rm'><i class='fa fa-times' aria-hidden='true'></i></span></li>");
-       
-         totalBudget += order1.totalcost();
-         $("#total").text(totalBudget);
+            var order1 = new Order(name,pieces,price,size,crust,topping)
+            $(".empty").append("<li>Chicken hawaiian + " +topping+" @ "+order1.totalcost()+"<span id ='rm'><i class='fa fa-times' aria-hidden='true'></i></span></li>");
+        
+            totalBudget += order1.totalcost();
+            $("#total").text(totalBudget);
 
         $("#rm").click(function(){
             $(this).closest('li').remove();
@@ -137,7 +136,6 @@ $(document).ready(function(){
         $('input[name="topping"]:checked').each(function() {
         topping.push($(this).val());
         });
-      
         var order2 = new Order(name,pieces,price,size,crust,topping)
         $(".empty").append("<li>Italian pizza + " +topping+" @ "+order2.totalcost()+"<span id ='rm2'><i class='fa fa-times' aria-hidden='true'></i></span></li>")
         
@@ -166,12 +164,12 @@ $(document).ready(function(){
         $('input[name="topping"]:checked').each(function() {
         topping.push($(this).val());
         });
-      
         var order3 = new Order(name,pieces,price,size,crust,topping)
         $(".empty").append("<li>Cheese pizza + " +topping+" @ "+order3.totalcost()+"<span id ='rm3'><i class='fa fa-times' aria-hidden='true'></i></span></li>")
         
         totalBudget += order3.totalcost();
         $("#total").text(totalBudget)
+      
 
         $("#rm3").click(function(){
             $(this).closest('li').remove();
@@ -196,12 +194,16 @@ $(document).ready(function(){
         $('input[name="topping"]:checked').each(function() {
         topping.push($(this).val());
         });
-      
-        var order4 = new Order(name,pieces,price,size,crust,topping)
-        $(".empty").append("<li>Meat pizza + " +topping+" @ "+order4.totalcost()+"<span id ='rm4'><i class='fa fa-times' aria-hidden='true'></i></span></li>")
+        if (pieces!="" && size!="" && crust !="" && topping !="") {
+            var order4 = new Order(name,pieces,price,size,crust,topping)
+            $(".empty").append("<li>Meat pizza + " +topping+" @ "+order4.totalcost()+"<span id ='rm4'><i class='fa fa-times' aria-hidden='true'></i></span></li>")
+            totalBudget += order4.totalcost();
+            $("#total").text(totalBudget);
         
-        totalBudget += order4.totalcost();
-        $("#total").text(totalBudget)
+        } else {
+            alert("Check order requirements before ordering")
+        }
+      
         $("#rm4").click(function(){
             $(this).closest('li').remove();
             totalBudget -= order4.totalcost();
@@ -213,5 +215,19 @@ $(document).ready(function(){
 
         
     })
+    $(".contact-us form").submit(function(){
+        var fullName = $("#name").val();
+        var email = $("#email").val();
+        var message=$("#message").val();
+        if (fullName!="" && email!="" && message!="") {
+            alert("Thank you "+fullName +" for contacting us! We shall send you areply to "+ email+" as soon as possible.")
+            event.preventDefault();   
+        }
+         else {
+            alert("Enter input before sending message")
+            event.preventDefault();
+        }
+
+})
 
 })
